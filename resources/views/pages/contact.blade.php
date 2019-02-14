@@ -2,11 +2,24 @@
 
 @section('content')
 <div class="jumbotron">
-    <h1>Contact Us</h1>
-    <p>This example is a quick exercise to illustrate how the default, static navbar and fixed to top navbar work. It
-        includes the responsive CSS and HTML, so it also adapts to your viewport and device.</p>
-    <p>
-        <a class="btn btn-lg btn-primary" href="/" role="button">View navbar docs &raquo;</a>
-    </p>
+    <h2>Contact Us</h2>
+
+    {!! Form::open(['url' => 'contact/submit']) !!}
+        <div class="form-group">
+            {{Form::label('name', 'Name')}}
+            {{Form::text('name', '',  ['class' => 'form-control', 'placeholder' => 'Enter Name'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('email', 'E-Mail Address')}}
+            {{Form::text('email', '',  ['class' => 'form-control', 'placeholder' => 'example@gmail.com'])}}
+        </div>
+        <div class="form-group">
+            {{Form::label('message', 'Message')}}
+            {{Form::textarea('message', '', ['class' => 'form-control', 'placeholder' => 'Enter Message'])}}
+        </div>
+        <div>
+            {{Form::submit('Submit', ['class'=> 'btn btn-primary'])}}
+        </div>
+    {!! Form::close() !!}
 </div>
 @endsection

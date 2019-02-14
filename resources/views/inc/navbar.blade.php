@@ -23,9 +23,9 @@
             </ul>
             <ul class="nav navbar-nav">
               <li class="{{Request::is('/') ? 'active' : ''}}"><a href="/">Home</a></li>
-              <li class="{{Request::is('/about') ? 'active' : ''}}"><a href="/about">About</a></li>
-              <li class="{{Request::is('/service') ? 'active' : ''}}"><a href="/service">Services</a></li>
-              <li class="{{Request::is('/contact') ? 'active' : ''}}"><a href="/contact">contact</a></li>
+              <li class="{{Request::is('about') ? 'active' : ''}}"><a href="/about">About</a></li>
+              <li class="{{Request::is('service') ? 'active' : ''}}"><a href="/service">Services</a></li>
+              <li class="{{Request::is('contact') ? 'active' : ''}}"><a href="/contact">contact</a></li>
             </ul>
 
         </div>
